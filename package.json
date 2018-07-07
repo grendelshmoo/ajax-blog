@@ -1,0 +1,31 @@
+{
+  "name": "ajax-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TEMP.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grendelshmoo/ajax-blog-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grendelshmoo/ajax-blog-api/issues"
+  },
+  "homepage": "https://github.com/grendelshmoo/ajax-blog-api#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
