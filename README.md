@@ -1,1 +1,1 @@
-# ajax-blog-api
+# ajax-blog
