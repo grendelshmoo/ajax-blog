@@ -24,13 +24,13 @@ function getOne(req, res, next) {
 function create(req, res, next) {
   const title = req.body.title
   const content = req.body.content
+  const data = model.create(title, content)
   if (!title || !content) {
     return next({
       status: 404,
       message: `Title and Content are required`
     })
   }
-  const data = model.create(title, content)
   if (!data) {
     return next({
       status: 400,
@@ -46,13 +46,13 @@ function update(req, res, next) {
   const id = req.params.id
   const title = req.body.title
   const content = req.body.content
+  const data = model.update(id, title, content)
   if (!title || !content) {
     return next({
       status: 404,
       message: `Title and Content are required.`
     })
   }
-  const data = model.update(id, title, content)
   if (!data) {
     return next({
       status: 400,
