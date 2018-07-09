@@ -2,10 +2,13 @@
   "name": "ajax-blog",
   "version": "1.0.0",
   "description": "",
-  "main": "TEMP.js",
+  "main": "app.js",
   "scripts": {
+    "dev-server": "nodemon app.js",
+    "build": "browserify scripts/main.js -o public/bundle.js",
+    "watch": "watchify scripts/main.js -o public/bundle.js",
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "run-all \"npm run dev-server\" \"npm run watch\""
   },
   "repository": {
     "type": "git",
@@ -26,7 +29,10 @@
     "uuid": "^3.3.2"
   },
   "devDependencies": {
+    "browserify": "^16.2.2",
+    "live-server": "^1.2.0",
     "nodemon": "^1.17.5",
-    "live-server": "^1.2.0"
+    "run-all": "^1.0.1",
+    "watchify": "^3.11.0"
   }
 }
